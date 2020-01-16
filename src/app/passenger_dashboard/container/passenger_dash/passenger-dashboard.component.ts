@@ -20,7 +20,7 @@ export class PassengerDashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('getAPI');
+    // console.log('getAPI');
     this.passengerService.getPassenger()
       .subscribe( data =>
         ( this.passengers = data ),
