@@ -12,9 +12,7 @@ export class PassengerCountComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    // console.log(this.items.length)
-  }
+  ngOnInit() {  }
 
   getTotalPass() {
     if (!this.items) { return; }

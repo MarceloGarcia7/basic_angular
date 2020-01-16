@@ -37,25 +37,20 @@ export class PassengerDetailComponent implements OnInit {
   }
 
   onClickEdit( passenger: Passenger ) {
-    console.log('edit', passenger, this.editing);
+    // console.log('edit', passenger, this.editing);
     this.itemId = passenger.id;
     if (this.editing) {
       const updated = {
         ...passenger, fullname : this.propName,
-        // type: 'EDIT'
       };
-      /*const dispatch = {
-        type: 'MOSTRAR_PRODUCTO',
-        data: {...passenger, name : this.propName}
-   };*/
-      console.log(updated);
+      // console.log(updated);
       this.edit.emit(updated);
     }
     this.editing = !this.editing;
   }
 
   onClickRemove( passenger: Passenger) {
-    console.log('Remove', passenger);
+    // console.log('Remove', passenger);
     this.remove.emit( passenger );
   }
 
@@ -70,7 +65,7 @@ export class PassengerDetailComponent implements OnInit {
   }
 
   onClickInfo(pasajero: Passenger) {
-    console.log(pasajero);
+    // console.log(pasajero);
     this.info.emit(pasajero);
     // tslint:disable-next-line: no-unused-expression
     this.itemId = pasajero.id;

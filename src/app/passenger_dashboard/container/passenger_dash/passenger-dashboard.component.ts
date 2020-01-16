@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Passenger } from '../../models/passenger.interface';
-// import { PassengerDashboardModule } from '../../passenger-dashboard.module';
 import { PassengerDashboardService } from '../../passenger-dashboard.service';
 
 @Component({
@@ -14,7 +13,7 @@ export class PassengerDashboardComponent implements OnInit {
   display: boolean = null;
   passengers: any; /* de otra manera ( [],{} ) sale errores */
   passenger: Passenger;
-  // @Input()
+
 
   constructor(private passengerService: PassengerDashboardService ) {
     this.title = 'New';
@@ -27,14 +26,6 @@ export class PassengerDashboardComponent implements OnInit {
         ( this.passengers = data ),
         ( err => console.log(err) )
         );
-    // console.log(test);
-    /*this.passengers = [
-      {id: 1, name: 'Scarlett', gender: 'Female', checkedIn: false, children: null},
-      {id: 2, name: 'Orsola', gender: 'Female', checkedIn: false, children: [{name: 'Jhon', age: 3}]},
-      {id: 3, name: 'Dorolisa', gender: 'Female', checkedIn: true, dateChecked: '10/02/19', children: null},
-      {id: 4, name: 'Kiersten', gender: 'Female', checkedIn: false, children: [{name: 'Elsa', age: 4}]},
-      {id: 5, name: 'Cele', gender: 'Female', checkedIn: true, children: null}
-    ];*/
   }
 
   handleFilter(filter: any) {
@@ -76,12 +67,5 @@ export class PassengerDashboardComponent implements OnInit {
     this.passenger = event;
   }
 
-
-/* ESTO LO HACE [(ngModel)]
-  handleChange(value:string) {
-    console.log(value);
-    this.name = value;
-  }
-*/
 
 }

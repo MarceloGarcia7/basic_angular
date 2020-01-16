@@ -11,11 +11,6 @@ import { PassengerInfoComponent } from './components/passenger-info/passenger-in
 // Servicios
 import { PassengerDashboardService } from './passenger-dashboard.service';
 
-// import { FormsModule } from '@angular/forms';
-
-// import { AppRoutingModule } from './app-routing.module';
-// import { AppComponent } from './app.component';
-
 @NgModule({
   declarations: [
     // AppComponent
