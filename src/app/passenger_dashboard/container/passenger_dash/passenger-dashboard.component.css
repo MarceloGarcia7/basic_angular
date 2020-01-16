@@ -1,0 +1,17 @@
+.status{
+  width: 10px;
+  height: 10px;
+  display: block;
+  margin: 5px;
+  float: left;
+  border-radius: 50%;
+  background: red
+}
+
+.cheked_in {
+  background: green !important;
+}
+
+.active {
+  background: grey !important
+}

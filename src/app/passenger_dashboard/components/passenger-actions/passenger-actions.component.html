@@ -1,0 +1,16 @@
+
+<p>passenger-actions works!</p>
+<button (click)="handleEvent(null)" class="btn btn-outline-warning"
+  [ngClass]="(display == null ? 'active': '')" style="margin-right:2px">
+  All
+</button>
+<button (click)="handleEvent(true)" class="btn btn-outline-warning"
+  [ngStyle]="(display == true ? activo: '')"
+  style="margin-right:2px">
+  chekedIn
+</button>
+<button (click)="handleEvent(false)" style="margin-right:2px"
+  class="btn btn-outline-warning" [ngStyle]="(display == false ? activo : '')">
+  Not checkedIn
+</button>
+<hr>

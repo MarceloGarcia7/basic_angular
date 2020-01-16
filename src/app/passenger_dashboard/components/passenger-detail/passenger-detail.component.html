@@ -1,0 +1,42 @@
+<p>passenger-detail works!</p>
+
+<div class="mt-4">
+    <ul class="list-group">
+        <div *ngFor="let item of passengers; let i = index" [id]="item.id">
+            <div *ngIf="(item.checkedIn == display) || display == null">
+                <li class="list-group-item">
+                    <span class="status" [ngClass]="(item.checkedIn) ? 'cheked_in' : '' "></span>
+                    <div>
+                        <ng-container *ngIf="editing && item.id === itemId; else elseTemplate">
+                        </ng-container>
+                        <ng-template #elseTemplate>
+                            {{i+1}} : {{item.fullname}}
+                        </ng-template>
+                        <div *ngIf="editing && item.id === itemId" class="">
+                            <input type="text" [value]=item.fullname (input)="handleChange(name.value)" #name>
+                        </div>
+                    </div>
+                    <div class="">
+                        <span>Date: {{(item.checkInDate ? (item.checkInDate.toString() | date: 'MMMM d, y') : 'Not checked' | uppercase )}}</span>
+                    </div>
+                    <div class="">
+                        <span>Children: {{item.children?.length || 0}}</span>
+                    </div>
+                    <div>
+                        <button (click)="onClickInfo(item)" class="btn btn-sm btn-outline-info m-1">Info</button>
+                        <button (click)="onClickEdit(item)" class="btn btn-sm btn-outline-info m-1">
+                          {{ editing && item.id === itemId ? 'Done' : 'Edit'}}</button>
+                        <button (click)="onClickRemove(item)" class="btn btn-sm btn-outline-secondary m-1">Remove</button>
+                        <button *ngIf="!item.checkedIn" (click)="onClickCheckIn(item)" class="btn btn-sm btn-outline-secondary m-1">Check In</button>
+                    </div>
+                    <hr>
+                    <ng-container *ngIf="item.id === itemId">
+                        <app-passenger-info [pasajero]="passenger"></app-passenger-info>
+                    </ng-container>
+                </li>
+
+            </div>
+        </div>
+    </ul>
+
+</div>

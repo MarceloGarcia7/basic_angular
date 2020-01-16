@@ -1,0 +1,17 @@
+<div class="container mt-4">
+    <app-passenger-count [items]="passengers"></app-passenger-count>
+    <app-passenger-actions (filter)="handleFilter($event)"></app-passenger-actions>
+    <div class="row">
+        <div class="col-md-12">
+            <app-passenger-detail [display]="display" [passengers]="passengers" (info)="onClickInfo($event)" (edit)="onClickEdit($event)" (checkIn)="onClickCheckIn($event)" (remove)="onClickRemove($event)">
+            </app-passenger-detail>
+        </div>
+    </div>
+
+
+    <!--<div class="input-group mt-2">
+    <input [(ngModel)]="name" type="text"
+      class="form-control" placeholder="">
+  </div>-->
+
+</div>

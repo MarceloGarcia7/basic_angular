@@ -1,0 +1,61 @@
+{
+    "passengers": [{
+            "fullname": "Javier de la Cuevas",
+            "id": 1,
+            "checkedIn": true,
+            "baggage": "hand-only",
+            "checkInDate": 1510742000000
+        },
+        {
+            "fullname": "Rose",
+            "id": 2,
+            "checkedIn": true,
+            "baggage": "hand-only",
+            "checkInDate": 1517214744258
+        },
+        {
+            "id": 3,
+            "fullname": "James",
+            "checkedIn": true,
+            "checkInDate": 1510742000000,
+            "children": [{
+                    "name": "Clhoe",
+                    "age": 7
+                },
+                {
+                    "name": "Emma",
+                    "age": 5
+                }
+            ],
+            "nationality": "united-states-of-america.svg",
+            "baggage": ""
+        },
+        {
+            "id": 4,
+            "fullname": "Louise",
+            "checkedIn": true,
+            "checkInDate": 1510792653000,
+            "children": null,
+            "nationality": null,
+            "baggage": ""
+        },
+        {
+            "id": 5,
+            "fullname": "Tina",
+            "checkedIn": true,
+            "children": null,
+            "nationality": "united-kingdom.svg",
+            "baggage": "",
+            "checkInDate": 1579010096280
+        },
+        {
+            "id": 6,
+            "fullname": "Peter Tym",
+            "checkedIn": true,
+            "children": null,
+            "nationality": "european-union.svg",
+            "baggage": "",
+            "checkInDate": 1579010206848
+        }
+    ]
+}
