@@ -17,34 +17,13 @@ export class PassengerDashboardService {
 
   list: Passenger[];
 
-  constructor(private http: HttpClient) {
-    // getApi();
-  }
-/*
-  getPassenger(): Observable<Passenger[]> {
-    console.log('getPassenger ', PASSENGER_API);
-    return this.http.get(PASSENGER_API)
-        .pipe( map( (response: any) => {
-         // console.log('Entro en el MAP');
-         // console.log(data);
-          // let resp => data.json();
-          return response;
-          /*.pipe(data => {
-            return data;
-          });
-        }));
-
-    // console.log(list);
-    // return list;
-  }
-*/
+  constructor(private http: HttpClient) { }
 
   getPassenger() {
     console.log('getPassenger ', PASSENGER_API);
 
     return this.http.get(PASSENGER_API)
       .pipe( map( resp => {
-        // console.log(resp);
         return resp;
       })
       );
@@ -65,8 +44,7 @@ export class PassengerDashboardService {
     return this.http
         .delete(`${PASSENGER_API}/${passenger.id}`)
         .pipe( map( (response: any) => {
-         // response.json();
-          // console.log(response.json());
+          console.log(response);
         }));
   }
 
