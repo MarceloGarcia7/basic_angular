@@ -49,15 +49,4 @@ export class PassengerDashboardService {
   }
 
 
-
-  /*getPassengers(): Passenger[] {
-    return [
-      {id: 1, name: 'Scarlett', gender: 'Female', checkedIn: false, children: null},
-      {id: 2, name: 'Orsola', gender: 'Female', checkedIn: false, children: [{name: 'Jhon', age: 3}]},
-      {id: 3, name: 'Dorolisa', gender: 'Female', checkedIn: true, dateChecked: '10/02/19', children: null},
-      {id: 4, name: 'Kiersten', gender: 'Female', checkedIn: false, children: [{name: 'Elsa', age: 4}]},
-      {id: 5, name: 'Cele', gender: 'Female', checkedIn: true, children: null}
-    ];
-  }*/
-
 }
